@@ -87,12 +87,18 @@
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
                   bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">General Facts</h2>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">2015 North Neighborhood Plan</h2>
         <img src="imgs/current_comprehensive_plan.png"/>
         <a class="mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium" href="https://www.veronawi.gov/DocumentCenter/View/947/North-Neighborhood-Plan" target="_blank">Comprehensive Plan</a>
-        <div class="mt-12 text-3xl font-bold text-orange-500 flex flex-col gap-12">
+        <div class="mt-12 text-3xl font-bold text-yellow-500 flex flex-col gap-12">
+            <div>Zoned "Suburban Residential" (yellow) for 15+ years.</div>
+            <div>Multi-Family zones are further out towards PD (brown).</div>
             <div>Current home / property owners invested based on long-standing Comprehensive Plan.</div>
-            <div>The property in question has been slated for "single family homes" for over 20 years.</div>
         </div>
     </section>
 
@@ -126,11 +132,13 @@
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Pricing Model</h2>
+        <div class="my-6 text-3xl font-bold text-orange-500 dark:text-yellow-500 flex flex-col gap-4">
+            <div>Epic, Exact Sciences, Rayovac, Insurance Companies, Med Tech create a lot of high-paying jobs for this area.</div>
+        </div>
         <img src="imgs/pricing_model.png"/>
-        <div class="mt-12 text-3xl font-bold text-orange-500 dark:text-orange-300 flex flex-col gap-4">
+        <div class="mt-12 text-3xl font-bold text-orange-500 dark:text-yellow-500 flex flex-col gap-4">
             <div>Supply & Demand set the equilibrium price.</div>
             <div>Demand is bounded by regional income levels.</div>
-            <div>Epic, Exact Sciences, Rayovac, Insurance Companies, Med Tech create a lot of high-paying jobs for this area.</div>
             <div>Income explains most of elevated costs.</div>
         </div>
     </section>
@@ -139,6 +147,11 @@
                 bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Actual Vacancy Rates</h2>
         <img src="imgs/actual_vacancy_rates.png"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Backus Property Project</h2>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
@@ -167,7 +180,7 @@
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
-        <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Original Plans</h2>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Original Plans Showing Single Family</h2>
         <img src="imgs/original_plans.jpeg"/>
     </section>
 
