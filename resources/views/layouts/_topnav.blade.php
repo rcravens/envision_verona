@@ -12,60 +12,14 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="app-top-nav">
             <ul class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 @if(!isset($hide_menu))
-                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.dashboard')">{{__('Home')}}</x-nav-link>
-                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Population')}}</x-nav-link>
-                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Housing')}}</x-nav-link>
-                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Projects')}}</x-nav-link>
-                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('About')}}</x-nav-link>
+                    {{--                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.dashboard')">{{__('Home')}}</x-nav-link>--}}
+                    {{--                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Population')}}</x-nav-link>--}}
+                    {{--                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Housing')}}</x-nav-link>--}}
+                    {{--                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('Projects')}}</x-nav-link>--}}
+                    {{--                    <x-nav-link :href="route('home.dashboard')" :active="request()->routeIs('home.xxx')">{{__('About')}}</x-nav-link>--}}
 
                     @auth
-                        <x-dropdown>
-                            <x-slot name="trigger">
-                                @php
-                                    $gravatar_helper = new \Cravens\Php\Utilities\GravatarHelper();
-                                    $gravatar_url = $gravatar_helper->get_gravatar_url(Auth::user()->email);
-                                @endphp
-                                <img class="inline-block size-6 rounded-full ring-2 ring-white" src="{{$gravatar_url}}" alt="">
-                                <span class="ml-2">{{ Auth::user()->full_name() }}</span>
-                            </x-slot>
-
-                            <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
-                                    {{ __('Profile') }}
-                                </x-dropdown-link>
-
-                                @if(auth()->user()->can_be(\App\Models\SecurityRoleOptions::Instructor))
-                                    <x-dropdown-link :href="route('instructors.in_progress.index')">
-                                        {{ __('Instructor') }}
-                                    </x-dropdown-link>
-                                @endif
-                                @if(auth()->user()->can_be(\App\Models\SecurityRoleOptions::UserAdmin))
-                                    <x-dropdown-link :href="route('users.index')">
-                                        {{ __('User Admin') }}
-                                    </x-dropdown-link>
-                                @endif
-                                @if(auth()->user()->can_be(\App\Models\SecurityRoleOptions::FinancialViewer))
-                                    <x-dropdown-link :href="route('payments.index')">
-                                        {{ __('Financial') }}
-                                    </x-dropdown-link>
-                                @endif
-                                @if(!Auth::guest() && Auth::user()->is_impersonating())
-                                    <x-dropdown-link :href="route('users.impersonate.stop')">
-                                        {{__('Stop Impersonation')}}
-                                    </x-dropdown-link>
-                                @else
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-
-                                        <x-dropdown-link :href="route('logout')"
-                                                         onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                @endif
-                            </x-slot>
-                        </x-dropdown>
+                        
                     @endauth
                 @endif
             </ul>

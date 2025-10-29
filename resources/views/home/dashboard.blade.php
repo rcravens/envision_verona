@@ -97,37 +97,37 @@
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-50 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Community Concerns - Envision Verona</h2>
         <img src="imgs/envision_verona_concerns.png"/>
         <a class="mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium" href="https://engagemksk.mysocialpinpoint.com/verona-comprehensive-plan" target="_blank">Envision Verona</a>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-50 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Single Family Homes - Envision Verona</h2>
         <img src="imgs/envision_verona_single_family.png"/>
         <a class="mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium" href="https://hdp-us-prod-app-mksk-engage-files.s3.us-west-2.amazonaws.com/8117/5407/5781/Envision_Verona_State_of_the_Community_Report_PART_3.pdf" target="_blank">Envision Verona</a>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-rose-50 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Multi Family Homes - Envision Verona</h2>
         <img src="imgs/envision_verona_multifamily.png"/>
         <a class="mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium" href="https://hdp-us-prod-app-mksk-engage-files.s3.us-west-2.amazonaws.com/8117/5407/5781/Envision_Verona_State_of_the_Community_Report_PART_3.pdf" target="_blank">Envision Verona</a>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-blue-50 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Population Model</h2>
         <img src="imgs/data_population_trends.png"/>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-50 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Pricing Model</h2>
         <img src="imgs/pricing_model.png"/>
-        <div class="mt-12 text-3xl font-bold text-orange-500 flex flex-col gap-12">
+        <div class="mt-12 text-3xl font-bold text-orange-500 dark:text-orange-300 flex flex-col gap-4">
             <div>Supply & Demand set the equilibrium price.</div>
             <div>Demand is bounded by regional income levels.</div>
             <div>Epic, Exact Sciences, Rayovac, Insurance Companies, Med Tech create a lot of high-paying jobs for this area.</div>
@@ -136,31 +136,37 @@
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-50 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Actual Vacancy Rates</h2>
+        <img src="imgs/actual_vacancy_rates.png"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Surrounding Land Use</h2>
         <img src="imgs/surrounding_land_use.png"/>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-rose-50 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expectations & Alignment</h2>
         <img src="imgs/expectations_alignment.png"/>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+                  bg-gray-100 dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expected View</h2>
         <img src="imgs/expected_view.jpeg"/>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-50 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Traffic Patterns</h2>
         <img src="imgs/traffic_patterns.png"/>
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-50 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Original Plans</h2>
         <img src="imgs/original_plans.jpeg"/>
     </section>
@@ -174,12 +180,13 @@
             <li>👉 Reject because it negatively impacts surrounding neighbors</li>
             <li>👉 Reject because of "too many apartments" concerns</li>
             <li>👉 Reject because community wants to develop more mid-size starter homes</li>
-            <li>👉 Reject because we want to create starter home vacancies by providing "move up" opportunities</li>
+            <li>👉 Reject because you want to create starter home vacancies by providing "move up" opportunities</li>
             <li>👉 Reject to prevent adjacent property values from declining 10-15%</li>
             <li>👉 Reject to prevent flooding of properties in low area</li>
             <li>👉 Reject because land owner's report already indicates it is suited for single-family homes</li>
             <li>👉 Reject because the site plan doesn't integrate well into the neighborhood</li>
             <li>👉 Reject because it is the right thing to do based on data-driven analysis</li>
+            <li>👉 Reject because the site plan will impact the natural habitat for cranes</li>
         </ul>
     </section>
 
