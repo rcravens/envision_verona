@@ -135,6 +135,36 @@
         </div>
     </section>
 
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Surrounding Land Use</h2>
+        <img src="imgs/surrounding_land_use.png"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Expectations & Alignment</h2>
+        <img src="imgs/expectations_alignment.png"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Expected View</h2>
+        <img src="imgs/expected_view.jpeg"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Traffic Patterns</h2>
+        <img src="imgs/traffic_patterns.png"/>
+    </section>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6
+                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Original Plans</h2>
+        <img src="imgs/original_plans.jpeg"/>
+    </section>
+
     <!-- Section: Population Growth Over Time -->
     {{--    <section class="h-screen flex flex-col justify-center items-center text-center px-6 py-8--}}
     {{--                bg-gray-100 dark:bg-gray-800">--}}
