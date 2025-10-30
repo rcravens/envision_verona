@@ -130,7 +130,7 @@
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">2015 North Neighborhood Plan</h2>
             <img src="imgs/current_comprehensive_plan.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
             <a class="theme-link-primary text-xl " href="https://www.veronawi.gov/DocumentCenter/View/947/North-Neighborhood-Plan" target="_blank">Comprehensive Plan <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
-            <div class="mt-4 md:mt-12 text-2xl md:text-3xl xl:text-4xl font-bold text-blue-800 dark:text-yellow-500 flex flex-col gap-4 md:gap-12">
+            <div class="mt-4 md:mt-12 text-2xl md:text-3xl xl:text-4xl font-bold text-blue-800 dark:text-yellow-500 flex flex-col gap-4 xl:gap-6">
                 <div>Zoned "Suburban Residential" (yellow) for 15+ years.</div>
                 <div>Multi-Family zones are further out towards PD (brown).</div>
                 <div>Current home / property owners invested based on long-standing Comprehensive Plan.</div>
@@ -248,7 +248,7 @@
                 bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Actual Vacancy Rates</h2>
             <img src="imgs/actual_vacancy_rates.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
-            <div class="my-6 text-xl sm:text-2xl md:text-4xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
+            <div class="my-6 text-xl md:text-2xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
                 A good apartment vacancy rate typically falls between 5% to 10%, indicating a balance between available rental units and demand.
                 Rates below 5% may suggest a shortage of rental options, while rates above 10% could indicate potential issues with the property or market.
             </div>
@@ -265,7 +265,7 @@
             <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full max-w-8xl">
                 <img src="imgs/backus_property.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
                 <div class="mt-2 md:mt-0 text-lg md:text-2xl font-semibold text-blue-800 dark:text-yellow-400 flex flex-col gap-2 md:gap-8 text-left md:text-left">
-                    <ul class="list-disc ml-5 space-y-2 sm:space-y-4">
+                    <ul class="list-disc ml-5 space-y-2 sm:space-y-2">
                         <li>Adjacent properties are all single-family homes</li>
                         <li>West & South-West of project consists of mostly single-family homes</li>
                         <li>There are a few multi-family units east of Hwy-M</li>
