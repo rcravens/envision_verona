@@ -315,7 +315,7 @@
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                   bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Reasons to Reject Project</h2>
-            <ul class="text-left text-lg md:text-4xl mb-8 list-none list-inside space-y-2 sm:space-y-4 md:space-y-6">
+            <ul class="text-left text-base sm:text-lg md:text-4xl mb-8 list-none list-inside space-y-2 sm:space-y-4 md:space-y-6">
                 <li>👉 Reject because it does not align with long-standing Comprehensive Plan</li>
                 <li>👉 Reject because it does not align with data from Envision Verona Project</li>
                 <li>👉 Reject because it negatively impacts surrounding neighbors</li>
