@@ -63,21 +63,20 @@
     @endpush
 
     <style>
-        /*.slides {*/
-        /*    scroll-snap-type: y mandatory;*/
-        /*    overflow-y: scroll;*/
-        /*    height: 100vh;*/
-        /*    scroll-behavior: smooth;*/
-        /*    padding-top: 80px;*/
-        /*    box-sizing: border-box;*/
-        /*}*/
+        .slides {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-behavior: smooth;
+            padding-top: 80px;
+            box-sizing: border-box;
+        }
 
-        /*.slides section {*/
-        /*    scroll-snap-align: start;*/
-        /*    scroll-snap-stop: always;*/
-        /*    margin-top: -80px;*/
-        /*}*/
-
+        .slides section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            margin-top: -80px;
+        }
     </style>
 
     <div class="slides">
