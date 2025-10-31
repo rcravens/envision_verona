@@ -1,0 +1,49 @@
+- verona specific for now, but could it be "generic" for other cities?
+    - research/data if not automated will limit ability to expand
+    - some sources are "city specific" (e.g., plan commission projects)
+
+- general data
+    - population
+        - total: history, current, & trends
+        - age distributions
+        - family size (e.g., 1, 2, 3, 4...) distributions
+        - gender composition
+        - race / ethnicity
+        - educational levels
+        - languages spoken
+        - disability
+        - veteran
+    - economic
+        - employment status
+        - industries / occupations
+        - major employers
+        - income distributions (individual + per household)
+    - housing
+        - type: history, current, & trends
+        - # bedrooms
+        - ownership: price, monthly mortgage, mortgage rate trends, vacancy
+        - rental: monthly rental, vacancy, average stay
+    - survey
+        - regular surveys
+        - provide easy mechanism to create/publish survey, collect, and view results
+
+- project data
+    - impacted neighborhood(s)
+    - links to public materials
+    - public comments
+    - survey
+        - project specific survey
+        - target impacted districts
+
+- features
+    - districts
+        - where possible all data can be broken down by district
+    - subscription / notifications
+        - visitors can subscribe to notification about selected districts (or all for city wide)
+    - data visualization
+        - filters: age, gender, district, languages....
+    - admins
+        - manage surveys
+        - comment moderator
+        - manage data access (public / private)
+
