@@ -83,7 +83,7 @@
         <!-- Section 1: Hero -->
         <section id="hero"
                  class="h-screen flex flex-col justify-end items-center text-center bg-cover bg-center relative"
-                 style="background-image: url('/imgs/hometown_usa.jpg');">
+                 style="background-image: url('/imgs/verona/hometown_usa.jpg');">
             <div class="relative z-10 px-6 py-4 mb-[15vh] rounded-lg backdrop-blur-sm
                 bg-white/70 dark:bg-black/60 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
                 <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-wide font-heading">
@@ -128,7 +128,7 @@
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-blue-200 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">2015 North Neighborhood Plan</h2>
-            <img src="imgs/current_comprehensive_plan.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
+            <img src="imgs/verona/current_comprehensive_plan.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
             <a class="theme-link-primary text-xl " href="https://www.veronawi.gov/DocumentCenter/View/947/North-Neighborhood-Plan" target="_blank">Comprehensive Plan <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
             <div class="mt-4 md:mt-12 text-2xl md:text-3xl xl:text-4xl font-bold text-blue-800 dark:text-yellow-500 flex flex-col gap-4 xl:gap-6">
                 <div>Zoned "Suburban Residential" (yellow) for 15+ years.</div>
@@ -141,11 +141,11 @@
                 bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Community Concerns</h2>
             <div class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 w-full max-w-6xl">
-                <img src="imgs/envision_verona_survey_stats.png"
+                <img src="imgs/verona/envision_verona_survey_stats.png"
                      class="w-full md:w-[48%] max-w-full h-auto rounded-lg shadow-lg object-contain"
                      alt="Survey Stats"/>
 
-                <img src="imgs/envision_verona_concerns.png"
+                <img src="imgs/verona/envision_verona_concerns.png"
                      class="w-full md:w-[48%] max-w-full h-auto rounded-lg shadow-lg object-contain"
                      alt="Community Concerns"/>
             </div>
@@ -156,11 +156,11 @@
                 bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Single Family Homes</h2>
             <div class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-6 w-full max-w-6xl">
-                <img src="imgs/envision_verona_single_family.png"
+                <img src="imgs/verona/envision_verona_single_family.png"
                      class="w-[80%] md:w-[48%] max-w-full h-auto rounded-lg object-contain sm:max-h-[50vh]"
                      alt="Single Family Homes"/>
 
-                <img src="imgs/envision_verona_housing_types.png"
+                <img src="imgs/verona/envision_verona_housing_types.png"
                      class="w-[80%] md:w-[48%] max-w-full h-auto rounded-lg object-contain sm:max-h-[50vh]"
                      alt="Housing Types"/>
             </div>
@@ -174,7 +174,7 @@
                 bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Multi Family Homes</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
-                <img src="imgs/envision_verona_multi_family.png"
+                <img src="imgs/verona/envision_verona_multi_family.png"
                      class="w-[80%] md:w-[48%] max-w-full h-auto rounded-lg shadow-md object-contain"
                      alt="Multi Family Homes"/>
                 <div class="mt-2 md:mt-0 md:text-lg lg:text-2xl font-semibold text-blue-800 dark:text-yellow-100 flex flex-col gap-4 md:gap-8 text-left md:text-left max-w-xl">
@@ -197,7 +197,7 @@
                 bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Population Model</h2>
             <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
-                <img src="imgs/population_chart.png" class="w-[80%] lg:w-[55%] max-w-full h-auto rounded-lg shadow-md object-contain" alt="Population Chart"/>
+                <img src="imgs/verona/population_chart.png" class="w-[80%] lg:w-[55%] max-w-full h-auto rounded-lg shadow-md object-contain" alt="Population Chart"/>
                 <div class="mt-2 md:mt-0 text-lg md:text-2xl font-semibold text-blue-800 dark:text-yellow-400 flex flex-col gap-2 md:gap-8 text-left md:text-left">
                     <div>
                         <h4 class="underline font-bold">Epic Systems Growth Reaches "Maturity"</h4>
@@ -235,7 +235,7 @@
                 Epic, Exact Sciences, Rayovac, Insurance Companies, Med Tech create a lot of high-paying jobs for this area.
             </div>
             <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
-                <img src="imgs/pricing_model.png" class="w-[80%] lg:w-[55%] max-w-full h-auto rounded-lg shadow-md object-contain"/>
+                <img src="imgs/verona/pricing_model.png" class="w-[80%] lg:w-[55%] max-w-full h-auto rounded-lg shadow-md object-contain"/>
                 <div class="mt-12 text-xl sm:text-2xl md:text-4xl font-bold text-orange-500 dark:text-yellow-500 flex flex-col gap-4">
                     <div>Supply & Demand set the equilibrium price.</div>
                     <div>Demand is bounded by regional income levels.</div>
@@ -247,7 +247,7 @@
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Actual Vacancy Rates</h2>
-            <img src="imgs/actual_vacancy_rates.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
+            <img src="imgs/verona/actual_vacancy_rates.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
             <div class="my-6 text-xl md:text-2xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
                 A good apartment vacancy rate typically falls between 5% to 10%, indicating a balance between available rental units and demand.
                 Rates below 5% may suggest a shortage of rental options, while rates above 10% could indicate potential issues with the property or market.
@@ -263,7 +263,7 @@
                 bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Surrounding Land Use</h2>
             <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full max-w-8xl">
-                <img src="imgs/backus_property.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
+                <img src="imgs/verona/backus_property.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
                 <div class="mt-2 md:mt-0 text-lg md:text-2xl font-semibold text-blue-800 dark:text-yellow-400 flex flex-col gap-2 md:gap-8 text-left md:text-left">
                     <ul class="list-disc ml-5 space-y-2 sm:space-y-2">
                         <li>Adjacent properties are all single-family homes</li>
@@ -280,7 +280,7 @@
                 bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expectations & Alignment</h2>
             <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
-                <img src="imgs/expectations.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
+                <img src="imgs/verona/expectations.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
                 <div class="mt-2 md:mt-0 text-lg md:text-2xl font-semibold text-blue-800 dark:text-yellow-400 flex flex-col gap-2 md:gap-8 text-left md:text-left">
                     <ul class="list-disc ml-5 space-y-2 sm:space-y-4">
                         <li>Expected single-family homes based on long-standing future zoning in Comprehensive Plan</li>
@@ -296,7 +296,7 @@
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                   bg-gray-100 dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expected View</h2>
-            <img src="imgs/expected_view.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
+            <img src="imgs/verona/expected_view.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
             <div class="my-6 text-xl sm:text-2xl md:text-4xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
                 Distance: ~160 feet<br/>Two images from same distance with alignment at expected spot based on site plan provided.
             </div>
@@ -305,13 +305,13 @@
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Traffic Patterns</h2>
-            <img src="imgs/traffic_patterns.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
+            <img src="imgs/verona/traffic_patterns.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
         </section>
 
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
                 bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Original Plans Showing Single Family</h2>
-            <img src="imgs/original_plans.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
+            <img src="imgs/verona/original_plans.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
         </section>
 
         <section class="h-screen flex flex-col justify-center items-center text-center px-6
