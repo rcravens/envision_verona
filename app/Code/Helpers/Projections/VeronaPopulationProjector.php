@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Code\Helpers\Projections;
+
+
 class VeronaPopulationProjector
 {
     // Historical population data (1960–2024)

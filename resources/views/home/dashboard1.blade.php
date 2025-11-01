@@ -75,11 +75,11 @@
              class="h-screen flex flex-col justify-end items-center text-center bg-cover bg-center relative"
              style="background-image: url('/imgs/hometown_usa.jpg');">
         <div class="relative z-10 px-6 py-4 mb-[15vh] rounded-lg backdrop-blur-sm
-                bg-white/70 dark:bg-black/60 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+                bg-white/70 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-wide font-heading">
                 Envision Verona
             </h1>
-            <p class="text-lg md:text-xl text-gray-800 dark:text-gray-300 font-body">
+            <p class="text-lg md:text-xl text-gray-800 font-body">
                 Know Your City. Plan Its Future.
             </p>
         </div>
@@ -87,7 +87,7 @@
 
     <!-- Section: Population Growth Over Time -->
     <section class="h-screen flex flex-col justify-center items-center text-center px-6 py-8
-                bg-gray-100 dark:bg-gray-800">
+                bg-gray-100">
         <h2 class="text-4xl font-bold mb-12">Interactive Population Projection</h2>
 
         <div class="flex flex-wrap gap-4 justify-center mb-6">
@@ -95,8 +95,8 @@
                 City Max Population:
                 <input type="number" id="inputK" value="50000" min="10000" step="1000" placeholder="45000"
                        class="border rounded px-2 py-1
-                bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100
-                border-gray-300 dark:border-gray-600
+                bg-white text-gray-900
+                border-gray-300
                 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
             </label>
 
@@ -104,8 +104,8 @@
                 Initial Growth Rate 2025 (%):
                 <input type="number" id="rInit" value="4" min="0" max="10" step="0.1" placeholder="3"
                        class="border rounded px-2 py-1
-                bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100
-                border-gray-300 dark:border-gray-600
+                bg-white text-gray-900
+                border-gray-300
                 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
             </label>
 
@@ -113,8 +113,8 @@
                 Final Growth Rate 2050 (%):
                 <input type="number" id="rFinal" value="2" min="0" max="10" step="0.1" placeholder="1.5"
                        class="border rounded px-2 py-1
-                bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100
-                border-gray-300 dark:border-gray-600
+                bg-white text-gray-900
+                border-gray-300
                 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
             </label>
 
@@ -124,18 +124,18 @@
         <div class="w-full max-w-4xl h-[60vh]">
             <canvas id="populationGrowth" class="w-full h-full" style="background-color: #fff"></canvas>
             <button id="openModelInfo"
-                    class="mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
+                    class="mt-4 text-blue-600 hover:underline text-sm font-medium">
                 ℹ️ Model Information
             </button>
 
             <!-- Modal -->
             <div id="modelInfoModal"
                  class="fixed inset-0 hidden bg-black bg-opacity-60 z-50 flex items-center justify-center">
-                <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg w-11/12 max-w-lg p-6
-                text-gray-800 dark:text-gray-200 overflow-y-auto max-h-[80vh]">
+                <div class="relative bg-white rounded-lg shadow-lg w-11/12 max-w-lg p-6
+                text-gray-800 overflow-y-auto max-h-[80vh]">
                     <!-- Close button -->
                     <button id="closeModelInfo"
-                            class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 dark:hover:text-gray-100 text-2xl leading-none">
+                            class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-2xl leading-none">
                         &times;
                     </button>
 
@@ -149,7 +149,7 @@
                         availability, infrastructure, and housing limits.
                         <br/><br/>
                         Mathematically, this model is represented as:
-                        <code class="block text-xs md:text-sm bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded px-2 py-1 mt-2">
+                        <code class="block text-xs md:text-sm bg-gray-200 text-gray-900 rounded px-2 py-1 mt-2">
                             P(t) = K − (K − P₀) · exp(−(r·P₀/K)·(t − t₀))
                         </code>
                         where <strong>P₀</strong> is the population at the base year (<strong>t₀ = 2025</strong>),
@@ -261,9 +261,9 @@
     </section>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+                  bg-white animate-on-scroll opacity-0 translate-y-10">
         <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Coming Soon</h2>
-        <ul class="text-lg md:text-xl text-gray-700 dark:text-gray-300 space-y-4 font-body list-disc list-inside">
+        <ul class="text-lg md:text-xl text-gray-700 space-y-4 font-body list-disc list-inside">
             <li>House / Rent Cost Analysis</li>
             <li>House / Rent Vacancy Rates</li>
             <li>Upcoming Project Impact Analysis</li>

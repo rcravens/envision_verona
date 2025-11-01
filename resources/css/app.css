@@ -9,23 +9,6 @@
 
 @tailwind utilities;
 
-@layer components {
-    .theme-link-primary {
-        @apply text-black dark:text-white hover:underline inline-flex items-center gap-1 transition-colors;
-    }
-
-    /* Optional: target child <i> for icon styling */
-    .theme-link-primary > .fa {
-        @apply text-xs opacity-70;
-    }
-
-    /* Optional: hover effect for icon */
-    .theme-link-primary:hover > .fa {
-        @apply opacity-100;
-    }
-}
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+.test-dark {
+    @apply bg-white dark:bg-black;
 }
