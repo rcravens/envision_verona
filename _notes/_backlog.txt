@@ -1,3 +1,23 @@
+- general facts
+    - community concerns: envision verona
+    - single family homes: envision verona
+    - multi family units: envision verona
+    - population model:
+    - pricing model:
+    - vacancy rates:
+- backus property
+    - suburban residential: north neighborhood plan
+    - surrounding land use
+    - expectations and alignment
+    - expected view
+    - traffic patterns
+    - original plans showing single family
+    - reasons to reject project
+
+
+
+
+
 - verona specific for now, but could it be "generic" for other cities?
     - research/data if not automated will limit ability to expand
     - some sources are "city specific" (e.g., plan commission projects)

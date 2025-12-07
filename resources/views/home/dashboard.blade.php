@@ -1,7 +1,4 @@
-<x-app-layout>
-    @section('page_description', 'Learn technology and best practices from seasoned developers, architects, and designers.')
-    @section('page_type', 'article')
-
+<x-layouts.app>
     @push('scripts')
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -64,7 +61,7 @@
 
     <style>
         .slides {
-            scroll-snap-type: y mandatory;
+            /*scroll-snap-type: y mandatory;*/
             overflow-y: scroll;
             height: 100vh;
             scroll-behavior: smooth;
@@ -520,4 +517,4 @@
         {{--    </section>--}}
     </div>
 
-</x-app-layout>
+</x-layouts.app>

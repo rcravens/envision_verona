@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function dashboard( Request $request ): View
     {
-        return view( 'home.dashboard' );
+        return view( 'home.index' );
     }
 }
