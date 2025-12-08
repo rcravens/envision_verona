@@ -63,8 +63,9 @@
         <div class="w-full bg-white dark:bg-gray-800 rounded-lg p-4">
             <h2 class="text-center text-xl font-bold mb-4">Reports</h2>
             <ul class="list-disc ml-5 space-y-2 sm:space-y-2">
-                @foreach(reports()->all() as $report)
-                    <li><a class="hover:underline" href="{{route('reports.analysis', $report->slug)}}">{{$report->name}}</a></li>
+                @php $reports = \App\Models\Report::orderBy('slug')->get(); @endphp
+                @foreach($reports->all() as $report)
+                    <li><a class="hover:underline" href="{{route('reports.analysis', $report->slug)}}">{{$report->title}}</a></li>
                 @endforeach
             </ul>
         </div>
