@@ -1,7 +1,7 @@
 <x-layouts.app>
 
     <!-- Section: Population Growth Over Time -->
-    <section class="min-h-screen py-8 bg-gray-100 dark:bg-gray-800">
+    <section class="min-h-screen px-4 py-8 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto">
             <div class="mb-12 flex flex-row items-center justify-between">
                 <h1 class="text-4xl font-bold">{{$report->name}} ({{$report->year}}) <a href="{{$report->url}}" class="text-base text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" target="_blank">view</a></h1>
@@ -48,7 +48,7 @@
                             <li><span class="font-bold">Affordability gaps exist</span>: there is a shortage of units affordable to moderate- and higher-income households (80%+ AMI), causing them to “rent down” and increase competition for lower-cost units.</li>
                         </x-report.ul-with-header>
                         <div class="text-4xl text-yellow-500">1. The rental market is relatively healthy right now</div>
-                        <div class="ml-6">
+                        <div class="ml-6 flex flex-col gap-4">
                             <x-report.ul-with-header title="Evidence from the report:">
                                 <li>Rental vacancy is 7.6%, far higher than earlier years and in the “balanced” range.</li>
                                 <li>A surge in multi-unit construction (265 units in 2022, 403 in 2023) has expanded supply.</li>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="text-4xl text-yellow-500">2. The ownership market is extremely tight</div>
-                        <div class="ml-6">
+                        <div class="ml-6 flex flex-col gap-4">
                             <x-report.ul-with-header title="Evidence from the report:">
                                 <li>Owner-occupied vacancy is effectively 0% — meaning homes for sale are extremely scarce.</li>
                                 <li>Detached single-family homes still make up the majority of the market, but very few are being added relative to demand.</li>
@@ -128,46 +128,46 @@
                                 <thead>
                                 <tr>
                                     <x-table.th>Income Range</x-table.th>
-                                    <x-table.th>Annual Salary</x-table.th>
-                                    <x-table.th>Households At Level</x-table.th>
-                                    <x-table.th>Affordable Units At Level</x-table.th>
-                                    <x-table.th>Surplus</x-table.th>
+                                    <x-table.th class="hidden md:table-cell">Annual Salary</x-table.th>
+                                    <x-table.th class="hidden md:table-cell">Households At Level</x-table.th>
+                                    <x-table.th class="hidden md:table-cell">Affordable Units At Level</x-table.th>
+                                    <x-table.th class="hidden md:table-cell">Surplus</x-table.th>
                                     <x-table.th>Need</x-table.th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <x-table.td><=50% HAMFI</x-table.td>
-                                    <x-table.td>$0-$40300</x-table.td>
-                                    <x-table.td>1200</x-table.td>
-                                    <x-table.td>1170</x-table.td>
-                                    <x-table.td>--</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">$0-$40300</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">1200</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">1170</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">--</x-table.td>
                                     <x-table.td>30</x-table.td>
                                 </tr>
                                 <tr>
                                     <x-table.td>51%-80% HAMFI</x-table.td>
-                                    <x-table.td>$40300-$64480</x-table.td>
-                                    <x-table.td>890</x-table.td>
-                                    <x-table.td>2230</x-table.td>
-                                    <x-table.td>1340</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">$40300-$64480</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">890</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">2230</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">1340</x-table.td>
                                     <x-table.td>--</x-table.td>
                                 </tr>
                                 <tr>
                                     <x-table.td>>=81% HAMFI</x-table.td>
-                                    <x-table.td>$64480+</x-table.td>
-                                    <x-table.td>3650</x-table.td>
-                                    <x-table.td>2245</x-table.td>
-                                    <x-table.td>--</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">$64480+</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">3650</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">2245</x-table.td>
+                                    <x-table.td class="hidden md:table-cell">--</x-table.td>
                                     <x-table.td>1405</x-table.td>
                                 </tr>
                                 </tbody>
                                 <tfoot>
                                 <tr>
                                     <x-table.th class="font-bold">All</x-table.th>
-                                    <x-table.th class="font-bold">All</x-table.th>
-                                    <x-table.th class="font-bold">5740</x-table.th>
-                                    <x-table.th class="font-bold">5645</x-table.th>
-                                    <x-table.th class="font-bold">--</x-table.th>
+                                    <x-table.th class="font-bold hidden md:table-cell">All</x-table.th>
+                                    <x-table.th class="font-bold hidden md:table-cell">5740</x-table.th>
+                                    <x-table.th class="font-bold hidden md:table-cell">5645</x-table.th>
+                                    <x-table.th class="font-bold hidden md:table-cell">--</x-table.th>
                                     <x-table.th class="font-bold">95</x-table.th>
                                 </tr>
                                 </tfoot>

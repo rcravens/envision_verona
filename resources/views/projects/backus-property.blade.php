@@ -5,17 +5,6 @@
     @push('scripts')
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Scroll-triggered animations
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('opacity-100', 'translate-y-0');
-                            entry.target.classList.remove('opacity-0', 'translate-y-10');
-                        }
-                    });
-                }, {threshold: 0.2});
-
-                document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
                 // Keyboard navigation
                 const slidesContainer = document.querySelector('.slides'); // new scroll container
@@ -28,7 +17,7 @@
                     if (isScrolling) return;
                     isScrolling = true;
 
-                    // Find section whose top is closest to container top
+                    // Find the section whose top is closest to the container top
                     let closestIndex = 0;
                     let minDistance = Infinity;
                     sections.forEach((sec, idx) => {
@@ -47,7 +36,7 @@
                         targetIndex = closestIndex - 1;
                     }
 
-                    // Scroll to target section inside slides container
+                    // Scroll to target a section inside the slides container
                     const targetSection = sections[targetIndex];
                     slidesContainer.scrollTo({
                         top     : targetSection.offsetTop,
@@ -64,18 +53,15 @@
 
     <style>
         .slides {
-            /*scroll-snap-type: y mandatory;*/
             overflow-y: scroll;
             height: 100vh;
             scroll-behavior: smooth;
-            padding-top: 80px;
             box-sizing: border-box;
         }
 
         .slides section {
             scroll-snap-align: start;
             scroll-snap-stop: always;
-            margin-top: -80px;
         }
     </style>
 
@@ -84,28 +70,19 @@
         <section id="hero"
                  class="h-screen flex flex-col justify-end items-center text-center bg-cover bg-center relative"
                  style="background-image: url('/imgs/verona/backus_property.jpeg');">
-            <div class="relative z-10 px-6 py-4 mb-[15vh] rounded-lg backdrop-blur-sm
-                bg-white/70 dark:bg-black/60 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <div class="relative z-10 px-6 py-4 mb-[15vh] rounded-lg backdrop-blur-sm bg-white/70 dark:bg-black/60">
                 <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-wide font-heading">
                     Backus Property Development
                 </h1>
             </div>
-            <div class="absolute bottom-24 inset-x-0 flex flex-col items-center
-            animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-
+            <div class="absolute bottom-24 inset-x-0 flex flex-col items-center">
                 <!-- Desktop / Tablet Hint -->
-                <div class="hidden md:flex bg-white/80 dark:bg-black/70
-                text-gray-900 dark:text-gray-100
-                px-5 py-2.5 rounded-full text-sm md:text-base
-                backdrop-blur-md shadow-md">
+                <div class="hidden md:flex bg-white/80 dark:bg-black/70 text-gray-900 dark:text-gray-100 px-5 py-2.5 rounded-full text-sm md:text-base backdrop-blur-md shadow-md">
                     <span class="font-medium tracking-wide">Press ↑ ↓ or ← → to explore</span>
                 </div>
 
                 <!-- Mobile Hint -->
-                <div class="flex md:hidden bg-white/80 dark:bg-black/70
-                text-gray-900 dark:text-gray-100
-                px-4 py-2 rounded-full text-sm
-                backdrop-blur-md shadow-md items-center gap-2">
+                <div class="flex md:hidden bg-white/80 dark:bg-black/70 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-full text-sm backdrop-blur-md shadow-md items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          class="w-4 h-4 animate-bounce"
                          fill="none" viewBox="0 0 24 24"
@@ -117,13 +94,11 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-white dark:bg-gray-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">General Facts</h2>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-blue-200 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-blue-200 dark:bg-blue-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">2015 North Neighborhood Plan</h2>
             <img src="/imgs/verona/current_comprehensive_plan.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
             <a class="theme-link-primary text-xl " href="https://www.veronawi.gov/DocumentCenter/View/947/North-Neighborhood-Plan" target="_blank">Comprehensive Plan <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
@@ -134,8 +109,7 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-emerald-100 dark:bg-emerald-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Community Concerns</h2>
             <div class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 w-full max-w-6xl">
                 <img src="/imgs/verona/envision_verona_survey_stats.png"
@@ -149,8 +123,7 @@
             <a class="theme-link-primary text-xl" href="https://engagemksk.mysocialpinpoint.com/verona-comprehensive-plan" target="_blank">Envision Verona <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-amber-100 dark:bg-amber-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Single Family Homes</h2>
             <div class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-6 w-full max-w-6xl">
                 <img src="/imgs/verona/envision_verona_single_family.png"
@@ -161,15 +134,14 @@
                      class="w-[80%] md:w-[48%] max-w-full h-auto rounded-lg object-contain sm:max-h-[50vh]"
                      alt="Housing Types"/>
             </div>
-            <div class="text-black text-2xl mt-6 font-bold">0% housing vacancy rate -vs- 7.6% rental vacancy rate</div>
+            <div class="text-black text-sm md:text-2xl mt-6 font-bold">0% housing vacancy rate -vs- 7.6% rental vacancy rate</div>
             <div class="mt-4 md:mt-12 text-lg md:text-3xl xl:text-4xl font-bold text-blue-800 dark:text-yellow-500 flex flex-col gap-12 max-w-6xl">
                 Strategy: Promote ‘move-up’ housing by building mid-size homes, enabling current owners to upgrade and free smaller homes for new buyers.
             </div>
             <a class="theme-link-primary text-xl" href="{{route('reports.analysis', 'housing-affordability-analysis')}}" target="_blank">Housing Affordability Analysis <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-rose-100 dark:bg-rose-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Multi Family Homes</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
                 <img src="/imgs/verona/envision_verona_multi_family.png"
@@ -191,8 +163,7 @@
             <a class="theme-link-primary text-xl" href="https://hdp-us-prod-app-mksk-engage-files.s3.us-west-2.amazonaws.com/8117/5407/5781/Envision_Verona_State_of_the_Community_Report_PART_3.pdf" target="_blank">Envision Verona <i class="fa fa-external-link text-xs opacity-70 group-hover:opacity-100"></i></a>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-blue-100 dark:bg-blue-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Population Model</h2>
             <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
                 <img src="/imgs/verona/population_chart.png" class="w-[80%] lg:w-[55%] max-w-full h-auto rounded-lg shadow-md object-contain" alt="Population Chart"/>
@@ -226,8 +197,7 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-emerald-100 dark:bg-emerald-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Pricing Model</h2>
             <div class="my-6 text-xl sm:text-2xl md:text-4xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
                 Epic, Exact Sciences, Rayovac, Insurance Companies, Med Tech create a lot of high-paying jobs for this area.
@@ -242,8 +212,7 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-blue-100 dark:bg-blue-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-blue-100 dark:bg-blue-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Actual Vacancy Rates</h2>
             <img src="/imgs/verona/actual_vacancy_rates.png" class="w-full max-w-6xl h-auto rounded-lg shadow-lg object-contain"/>
             <div class="my-6 text-xl md:text-2xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
@@ -254,13 +223,11 @@
 
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-white dark:bg-gray-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Backus Property Project</h2>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-amber-100 dark:bg-amber-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Surrounding Land Use</h2>
             <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full max-w-8xl">
                 <img src="/imgs/verona/backus_property.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
@@ -276,8 +243,7 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-rose-100 dark:bg-rose-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-rose-100 dark:bg-rose-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expectations & Alignment</h2>
             <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full max-w-6xl">
                 <img src="/imgs/verona/expectations.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
@@ -293,8 +259,7 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-gray-100 dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-100 dark:bg-gray-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Expected View</h2>
             <img src="/imgs/verona/expected_view.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
             <div class="my-6 text-xl sm:text-2xl md:text-4xl italic font-bold text-orange-500 dark:text-red-500 flex flex-col gap-4 max-w-6xl">
@@ -302,20 +267,17 @@
             </div>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-emerald-100 dark:bg-emerald-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-emerald-100 dark:bg-emerald-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Traffic Patterns</h2>
             <img src="/imgs/verona/traffic_patterns.png" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                bg-amber-100 dark:bg-amber-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-amber-100 dark:bg-amber-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Original Plans Showing Single Family</h2>
             <img src="/imgs/verona/original_plans.jpeg" class="w-full max-w-4xl h-auto rounded-lg shadow-md object-contain"/>
         </section>
 
-        <section class="h-screen flex flex-col justify-center items-center text-center px-6
-                  bg-white dark:bg-gray-900 animate-on-scroll opacity-0 translate-y-10">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-6 bg-white dark:bg-gray-900">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Reasons to Reject Project</h2>
             <ul class="text-left text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-3xl mb-8 list-none list-inside space-y-2 sm:space-y-4 md:space-y-6">
                 <li>👉 Reject because it does not align with long-standing Comprehensive Plan</li>
@@ -333,5 +295,4 @@
             </ul>
         </section>
     </div>
-
 </x-layouts.app>
