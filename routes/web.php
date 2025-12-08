@@ -29,6 +29,7 @@ Route::prefix( 'models' )->name( 'models.' )->group( function () {
 
 Route::get( '/chat', [ ChatBotController::class, 'chat' ] )->name( 'chat' );
 Route::post( '/chat/response', [ ChatBotController::class, 'get_response' ] )->name( 'chat.response' );
+Route::post( '/chat/clear', [ ChatBotController::class, 'clear' ] )->name( 'chat.clear' );
 
 Route::get( '/bob/test', [ BobsController::class, 'test' ] )->name( 'bob.test' );
 

@@ -3,9 +3,15 @@
     <div class="flex flex-col h-screen max-h-[calc(100vh-84px)]">
 
         <!-- Header -->
-        <div class="p-4 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="p-4 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
             <h1 class="text-2xl font-semibold">ChatBot</h1>
+
+            <button id="new-conversation"
+                    class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg shadow">
+                New Conversation
+            </button>
         </div>
+
 
         <!-- Chat Box -->
         <div id="chat-box"
@@ -118,6 +124,23 @@
                 div.textContent = text;
                 return div.innerHTML;
             }
+
+            document.getElementById('new-conversation').addEventListener('click', function () {
+                fetch("{{ route('chat.clear') }}", {
+                    method : "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
+                    },
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Clear the chat box on the page
+                            chatBox.innerHTML = '';
+                        }
+                    });
+            });
         </script>
 
         <!-- Include Marked.js for client-side markdown rendering -->

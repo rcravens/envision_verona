@@ -11,10 +11,16 @@ class ChatBotController extends Controller
 {
     public function chat( Request $request ): View
     {
-//        session()->forget( 'chat_messages' );
         $messages = session( 'chat_messages', [] );
 
         return view( 'chat.index', compact( 'messages' ) );
+    }
+
+    public function clear()
+    {
+        session()->forget( 'chat_messages' );
+
+        return response()->json( [ 'success' => true ] );
     }
 
     public function get_response( Request $request )
@@ -31,7 +37,7 @@ class ChatBotController extends Controller
         // --- Add user message to history ---
         $messages[] = [
             'role'    => 'user',
-            'content' => $userMessage,
+            'content' => $request->message,
         ];
 
         // --- Call your RAG chatbot ---
