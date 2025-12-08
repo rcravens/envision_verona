@@ -3,6 +3,9 @@
 namespace App\Code\Ai;
 
 
+use NeuronAI\Chat\Enums\MessageRole;
+use NeuronAI\Chat\Messages\Message;
+use NeuronAI\Chat\Messages\UserMessage;
 use NeuronAI\Providers\AIProviderInterface;
 use NeuronAI\Providers\OpenAI\OpenAI;
 use NeuronAI\RAG\Embeddings\EmbeddingsProviderInterface;
@@ -21,6 +24,42 @@ class ChatBot extends RAG
     {
         $this->api_key      = $api_key ?? config( 'openai.api_key' );
         $this->vector_store = new VectorStore( 'verona' );
+    }
+
+    public function ask( string $question, array $history = [] ): ?string
+    {
+        $persona = "You are Verona Advisor AI, an expert on all things related to Verona, Italy.
+                Always answer as if advising the mayor and city council. Be concise, professional,
+                and cite relevant knowledge from your document base when possible.";
+
+        $messages = [ new Message( MessageRole::SYSTEM, $persona ) ];
+
+        foreach ( $history as $m )
+        {
+            if ( $m[ 'role' ] === 'user' )
+            {
+                $messages[] = new UserMessage( $m[ 'content' ] );
+            }
+            elseif ( $m[ 'role' ] === 'assistant' )
+            {
+                $messages[] = new Message( MessageRole::ASSISTANT, $m[ 'content' ] );
+            }
+        }
+        $messages[] = new UserMessage( $question );
+        
+        try
+        {
+            $result   = $this->chat( $messages );
+            $response = $result->getContent();
+        }
+        catch( \Throwable $e )
+        {
+            dd( $e, $question );
+
+            return null;
+        }
+
+        return $response;
     }
 
     protected function provider(): AIProviderInterface
