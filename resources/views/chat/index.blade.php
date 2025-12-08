@@ -1,6 +1,6 @@
 <x-layouts.app>
 
-    <div class="flex flex-col h-screen max-h-[calc(100vh-84px)]">
+    <div class="max-w-6xl mx-auto m-4 p-4 flex flex-col h-screen max-h-[calc(100vh-84px)]">
 
         <!-- Header -->
         <div class="p-4 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
