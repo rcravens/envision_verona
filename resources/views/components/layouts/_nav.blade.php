@@ -12,105 +12,103 @@
         </button>
         <div class="flex-col md:flex-row items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="app-top-nav">
             @if(!isset($hide_menu))
-                @if(!(request()->routeIs('survey.questions_show') || request()->routeIs('survey.take_show')))
-                    <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 p-4 md:p-0 mt-4 md:mt-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <x-nav.link :href="route('home')" active="{{ request()->routeIs('home') }}">Home</x-nav.link>
-                        <x-nav.dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                    <span>Projects</span>
-                                    <span class="ms-1">
+                <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 p-4 md:p-0 mt-4 md:mt-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <x-nav.link :href="route('home')" active="{{ request()->routeIs('home') }}">Home</x-nav.link>
+                    <x-nav.dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                <span>Projects</span>
+                                <span class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                                         </svg>
                                     </span>
-                                </button>
-                            </x-slot>
+                            </button>
+                        </x-slot>
 
-                            <x-slot name="content">
-                                <x-nav.dropdown-link :href="route('projects.index')">Project List</x-nav.dropdown-link>
-                                @foreach(projects()->all() as $project)
-                                    <x-nav.dropdown-link :href="route('projects.analysis', $project->slug)">{{$project->name}}</x-nav.dropdown-link>
-                                @endforeach
-                            </x-slot>
-                        </x-nav.dropdown>
-                        <x-nav.dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                    <span>Reports</span>
-                                    <span class="ms-1">
+                        <x-slot name="content">
+                            <x-nav.dropdown-link :href="route('projects.index')">Project List</x-nav.dropdown-link>
+                            @foreach(projects()->all() as $project)
+                                <x-nav.dropdown-link :href="route('projects.analysis', $project->slug)">{{$project->name}}</x-nav.dropdown-link>
+                            @endforeach
+                        </x-slot>
+                    </x-nav.dropdown>
+                    <x-nav.dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                <span>Reports</span>
+                                <span class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                                         </svg>
                                     </span>
-                                </button>
-                            </x-slot>
+                            </button>
+                        </x-slot>
 
-                            <x-slot name="content">
-                                <x-nav.dropdown-link :href="route('reports.index')">Report List</x-nav.dropdown-link>
-                                @foreach(reports()->all() as $report)
-                                    <x-nav.dropdown-link href="{{route('reports.analysis', $report->slug)}}">{{$report->name}}</x-nav.dropdown-link>
-                                @endforeach
-                            </x-slot>
-                        </x-nav.dropdown>
-                        <x-nav.dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                    <span>Models</span>
-                                    <span class="ms-1">
+                        <x-slot name="content">
+                            <x-nav.dropdown-link :href="route('reports.index')">Report List</x-nav.dropdown-link>
+                            @foreach(reports()->all() as $report)
+                                <x-nav.dropdown-link href="{{route('reports.analysis', $report->slug)}}">{{$report->name}}</x-nav.dropdown-link>
+                            @endforeach
+                        </x-slot>
+                    </x-nav.dropdown>
+                    <x-nav.dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                <span>Models</span>
+                                <span class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                                         </svg>
                                     </span>
-                                </button>
-                            </x-slot>
+                            </button>
+                        </x-slot>
 
-                            <x-slot name="content">
-                                <x-nav.dropdown-link :href="route('models.population')">Population Growth</x-nav.dropdown-link>
-                            </x-slot>
-                        </x-nav.dropdown>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center md:space-x-2 space-y-2 md:space-y-0 p-0 mt-4 ml-0 md:ml-6 mx-2 md:mt-0">
-                        @auth
-                            <div class="">
-                                <x-nav.dropdown align="right" width="48">
-                                    <x-slot name="trigger">
-                                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                            <span>{{ Auth::user()->name }}</span>
-                                            <span class="ms-1">
+                        <x-slot name="content">
+                            <x-nav.dropdown-link :href="route('models.population')">Population Growth</x-nav.dropdown-link>
+                        </x-slot>
+                    </x-nav.dropdown>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-2 space-y-2 md:space-y-0 p-0 mt-4 ml-0 md:ml-6 mx-2 md:mt-0">
+                    @auth
+                        <div class="">
+                            <x-nav.dropdown align="right" width="48">
+                                <x-slot name="trigger">
+                                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                        <span>{{ Auth::user()->name }}</span>
+                                        <span class="ms-1">
                                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                                                 </svg>
                                             </span>
-                                        </button>
-                                    </x-slot>
+                                    </button>
+                                </x-slot>
 
-                                    <x-slot name="content">
-                                        <x-nav.dropdown-link :href="route('profile.edit')">
-                                            {{ __('Profile') }}
-                                        </x-nav.dropdown-link>
+                                <x-slot name="content">
+                                    <x-nav.dropdown-link :href="route('profile.edit')">
+                                        {{ __('Profile') }}
+                                    </x-nav.dropdown-link>
 
-                                        <!-- Authentication -->
-                                        <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <x-nav.dropdown-link :href="route('logout')"
-                                                                 onclick="event.preventDefault();
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <x-nav.dropdown-link :href="route('logout')"
+                                                             onclick="event.preventDefault();
                                                                  this.closest('form').submit();">
-                                                {{ __('Log Out') }}
-                                            </x-nav.dropdown-link>
-                                        </form>
-                                    </x-slot>
-                                </x-nav.dropdown>
-                            </div>
-                        @endauth
-                        @guest
-                            @if(!request()->routeIs('login') && Route::has('login'))
-                                <x-nav.link-button-secondary href="{{route('login')}}" active="{{ request()->routeIs('login') }}">Login</x-nav.link-button-secondary>
-                                <x-nav.link-button-primary href="{{route('register')}}" active="{{ request()->routeIs('register') }}">Register</x-nav.link-button-primary>
-                            @endif
-                        @endguest
-                    </div>
-                @endif
+                                            {{ __('Log Out') }}
+                                        </x-nav.dropdown-link>
+                                    </form>
+                                </x-slot>
+                            </x-nav.dropdown>
+                        </div>
+                    @endauth
+                    @guest
+                        @if(!request()->routeIs('login') && Route::has('login'))
+                            <x-nav.link-button-secondary href="{{route('login')}}" active="{{ request()->routeIs('login') }}">Login</x-nav.link-button-secondary>
+                            <x-nav.link-button-primary href="{{route('register')}}" active="{{ request()->routeIs('register') }}">Register</x-nav.link-button-primary>
+                        @endif
+                    @endguest
+                </div>
             @endif
             <button id="theme-toggle" type="button" class=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-lg m-0 text-sm p-2.5">
                 <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
