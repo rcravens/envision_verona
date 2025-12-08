@@ -128,6 +128,7 @@
                                 <thead>
                                 <tr>
                                     <x-table.th>Income Range</x-table.th>
+                                    <x-table.th>Annual Salary</x-table.th>
                                     <x-table.th>Households At Level</x-table.th>
                                     <x-table.th>Affordable Units At Level</x-table.th>
                                     <x-table.th>Surplus</x-table.th>
@@ -137,6 +138,7 @@
                                 <tbody>
                                 <tr>
                                     <x-table.td><=50% HAMFI</x-table.td>
+                                    <x-table.td>$0-$40300</x-table.td>
                                     <x-table.td>1200</x-table.td>
                                     <x-table.td>1170</x-table.td>
                                     <x-table.td>--</x-table.td>
@@ -144,6 +146,7 @@
                                 </tr>
                                 <tr>
                                     <x-table.td>51%-80% HAMFI</x-table.td>
+                                    <x-table.td>$40300-$64480</x-table.td>
                                     <x-table.td>890</x-table.td>
                                     <x-table.td>2230</x-table.td>
                                     <x-table.td>1340</x-table.td>
@@ -151,6 +154,7 @@
                                 </tr>
                                 <tr>
                                     <x-table.td>>=81% HAMFI</x-table.td>
+                                    <x-table.td>$64480+</x-table.td>
                                     <x-table.td>3650</x-table.td>
                                     <x-table.td>2245</x-table.td>
                                     <x-table.td>--</x-table.td>
@@ -159,6 +163,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <x-table.th class="font-bold">All</x-table.th>
                                     <x-table.th class="font-bold">All</x-table.th>
                                     <x-table.th class="font-bold">5740</x-table.th>
                                     <x-table.th class="font-bold">5645</x-table.th>
