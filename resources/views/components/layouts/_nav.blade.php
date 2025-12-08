@@ -14,6 +14,7 @@
             @if(!isset($hide_menu))
                 <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 p-4 md:p-0 mt-4 md:mt-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <x-nav.link :href="route('home')" active="{{ request()->routeIs('home') }}">Home</x-nav.link>
+                    <x-nav.link :href="route('chat')" active="{{ request()->routeIs('chat') }}">Chat</x-nav.link>
                     <x-nav.dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
