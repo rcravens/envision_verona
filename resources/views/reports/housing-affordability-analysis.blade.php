@@ -122,7 +122,53 @@
 
                 <div>
                     <h4 class="text-xl font-bold mb-3">Affordability Gaps & Imbalances</h4>
-                    <div class="ml-6">
+                    <div class="ml-6 flex flex-col gap-4">
+                        <div>
+                            <table class="mx-auto bg-gray-100 dark:bg-gray-900 text-left">
+                                <thead>
+                                <tr>
+                                    <x-table.th>Income Range</x-table.th>
+                                    <x-table.th>Households At Level</x-table.th>
+                                    <x-table.th>Affordable Units At Level</x-table.th>
+                                    <x-table.th>Surplus</x-table.th>
+                                    <x-table.th>Need</x-table.th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <x-table.td><=50% HAMFI</x-table.td>
+                                    <x-table.td>1200</x-table.td>
+                                    <x-table.td>1170</x-table.td>
+                                    <x-table.td>--</x-table.td>
+                                    <x-table.td>30</x-table.td>
+                                </tr>
+                                <tr>
+                                    <x-table.td>51%-80% HAMFI</x-table.td>
+                                    <x-table.td>890</x-table.td>
+                                    <x-table.td>2230</x-table.td>
+                                    <x-table.td>1340</x-table.td>
+                                    <x-table.td>--</x-table.td>
+                                </tr>
+                                <tr>
+                                    <x-table.td>>=81% HAMFI</x-table.td>
+                                    <x-table.td>3650</x-table.td>
+                                    <x-table.td>2245</x-table.td>
+                                    <x-table.td>--</x-table.td>
+                                    <x-table.td>1405</x-table.td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <x-table.th class="font-bold">All</x-table.th>
+                                    <x-table.th class="font-bold">5740</x-table.th>
+                                    <x-table.th class="font-bold">5645</x-table.th>
+                                    <x-table.th class="font-bold">--</x-table.th>
+                                    <x-table.th class="font-bold">95</x-table.th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                            <div class="text-sm italic text-center">The HUD Area Median Family Income (HAMFI) for a family of 4 was $80,600 annually. (2021)</div>
+                        </div>
                         <x-report.ul-with-header>
                             <li>There is a surplus of units affordable to households earning 51–80% of Area Median Income (AMI), and a nearly matching number of units for those under 50% AMI.</li>
                             <li class="text-yellow-500">But there is a significant shortage of units affordable for households at or above 80% AMI — meaning many moderate- and higher-income households are buying or renting “down,” increasing competition for lower-cost housing.</li>
