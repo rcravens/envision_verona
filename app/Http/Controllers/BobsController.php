@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Code\Ai\ChatBot;
 use App\Code\Integrations\RentCastApi;
 use App\Models\HousingPrice;
 use App\Models\RentalPrice;
@@ -11,12 +12,23 @@ use DOMXPath;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use InvalidArgumentException;
+use NeuronAI\Chat\Messages\UserMessage;
 use RuntimeException;
 
 class BobsController extends Controller
 {
     public function test( Request $request ): View
     {
+//        $populator = new VectorStore( 'verona' );
+//        $populator->populate();
+//        dd( 'populated' );
+        $bot      = ChatBot::make();
+        $response = $bot->chat(
+            new UserMessage( 'Based on the data provided, what is the rental vacancy rate for verona, wi?' )
+        );
+        dd( $response->getContent() );
+
+        dd( 'here' );
 //        $result = $this->scrapeApartmentsByZip( '53593' );
 //        dd( $result );
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BobsController;
+use App\Http\Controllers\ChatBotController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Models\PopulationModelController;
 use App\Http\Controllers\Projects\ProjectController;
@@ -24,6 +26,11 @@ Route::prefix( 'reports' )->name( 'reports.' )->group( function () {
 Route::prefix( 'models' )->name( 'models.' )->group( function () {
     Route::get( '/population', [ PopulationModelController::class, 'index' ] )->name( 'population' );
 } );
+
+Route::get( '/chat', [ ChatBotController::class, 'chat' ] )->name( 'chat' );
+Route::post( '/chat/response', [ ChatBotController::class, 'get_response' ] )->name( 'chat.response' );
+
+Route::get( '/bob/test', [ BobsController::class, 'test' ] )->name( 'bob.test' );
 
 //Route::view( 'dashboard', 'dashboard' )->middleware( [ 'auth', 'verified' ] )->name( 'dashboard' );
 
