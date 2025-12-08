@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-layouts.guest>
     <!-- Session Status -->
     <x-auth.session-status class="mb-4" :status="session('status')"/>
 
@@ -49,4 +49,4 @@
     <div class="mt-4 py-4 border-t border-gray-600 text-center">
         Not a member? <a href="{{route('register')}}" class="underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Register Now!</a>
     </div>
-</x-guest-layout>
+</x-layouts.guest>
