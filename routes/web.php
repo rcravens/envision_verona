@@ -17,7 +17,7 @@ Route::prefix( 'projects' )->name( 'projects.' )->group( function () {
 // Reports
 Route::prefix( 'reports' )->name( 'reports.' )->group( function () {
     Route::get( '/', [ ReportController::class, 'index' ] )->name( 'index' );
-    Route::get( '/{slug}', [ ReportController::class, 'analysis' ] )->name( 'analysis' );
+    Route::get( '/{report:slug}', [ ReportController::class, 'analysis' ] )->name( 'analysis' );
 } );
 
 // Models

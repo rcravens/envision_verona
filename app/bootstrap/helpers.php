@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\OldReports;
 use App\Models\Projects;
-use App\Models\Reports;
 use App\Utils\AlertHelper;
 
 if ( ! function_exists( 'alert' ) )
@@ -16,14 +16,6 @@ if ( ! function_exists( 'alert' ) )
         }
 
         return $alert->info( $message, $title );
-    }
-}
-
-if ( ! function_exists( 'reports' ) )
-{
-    function reports(): Reports
-    {
-        return Reports::instance();
     }
 }
 

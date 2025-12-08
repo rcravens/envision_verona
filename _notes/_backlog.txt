@@ -1,3 +1,17 @@
+- reports
+    - id
+    - slug
+    - name
+    - url
+    - year
+    - categories
+
+
+
+
+
+
+
 - general facts
     - community concerns: envision verona
     - single family homes: envision verona

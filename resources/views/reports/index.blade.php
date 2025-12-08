@@ -16,7 +16,7 @@
             @foreach($reports as $report)
                 <tr>
                     <x-table.td>
-                        <x-table.link href="{{$report->url}}" target="_blank">{{ $report->name }}</x-table.link>
+                        <x-table.link href="{{$report->url}}" target="_blank">{{ $report->title }}</x-table.link>
                     </x-table.td>
                     <x-table.td>{{ $report->year }}</x-table.td>
                     <x-table.td>

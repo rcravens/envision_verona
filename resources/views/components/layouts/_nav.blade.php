@@ -47,8 +47,9 @@
 
                         <x-slot name="content">
                             <x-nav.dropdown-link :href="route('reports.index')">Report List</x-nav.dropdown-link>
-                            @foreach(reports()->all() as $report)
-                                <x-nav.dropdown-link href="{{route('reports.analysis', $report->slug)}}">{{$report->name}}</x-nav.dropdown-link>
+                            @php $reports = \App\Models\Report::orderBy('slug')->get(); @endphp
+                            @foreach($reports as $report)
+                                <x-nav.dropdown-link href="{{route('reports.analysis', $report->slug)}}">{{$report->title}}</x-nav.dropdown-link>
                             @endforeach
                         </x-slot>
                     </x-nav.dropdown>
