@@ -1,5 +1,36 @@
 <x-layouts.app>
 
+    <style>
+        #chat-box .assistant-content p {
+            margin-bottom: 1rem;
+        }
+
+        #chat-box .assistant-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        #chat-box .assistant-content ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        #chat-box .assistant-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        #chat-box .assistant-content strong {
+            font-weight: 600;
+        }
+
+        #chat-box .assistant-content em {
+            font-style: italic;
+        }
+    </style>
+
     <div class="max-w-6xl mx-auto m-4 p-4 flex flex-col h-screen max-h-[calc(100vh-84px)]">
 
         <!-- Header -->
@@ -90,6 +121,7 @@
                     .then(res => res.json())
                     .then(data => {
                         appendMessage('assistant', data.reply);
+                        console.log(data);
                     });
             });
 
@@ -107,7 +139,7 @@
                 } else {
                     html = `
                 <div class="flex justify-start">
-                    <div class="max-w-xl bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow prose dark:prose-invert">
+                    <div class="assistant-content max-w-xl bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow prose dark:prose-invert">
                         ${marked.parse(text)}
                     </div>
                 </div>

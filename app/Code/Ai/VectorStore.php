@@ -94,10 +94,6 @@ class VectorStore
         file_put_contents( $this->meta_file(), json_encode( $meta, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) );
 
         echo "\n<br>✓ Vector store populated with $written documents (dimension: " . self::$expected_dimensions . ")\n<br>";
-
-
-        dd( 'here' );
-
     }
 
     private function get_file_contents( $document ): string
@@ -197,7 +193,7 @@ class VectorStore
                                           'embedding' => $embeddings,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         'content' => $chunk[ 'chunk' ],
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         'sourceType' => $document->type,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          'sourceName' => $document->name,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       'sourceName' => $document->name,
                                           'chunk'     => $chunk[ 'index' ],
                                           'id'        => md5( $chunk[ 'chunk' ] ),
                                           'metadata'  => [],

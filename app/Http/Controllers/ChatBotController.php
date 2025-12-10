@@ -32,7 +32,7 @@ class ChatBotController extends Controller
 
         $bot      = new ChatBot();
         $response = $bot->ask( $request->message, $messages );
-        $response = nl2br( e( $response ) );
+//        $response = nl2br( e( $response ) );
 
         $messages[] = [
             'role'    => 'user',
